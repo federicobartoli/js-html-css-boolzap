@@ -86,12 +86,15 @@ main {
 }
 
 .avatar-utente-object-side{
+     display: flex;
+     align-items: center;
      width:50%;
 }
 
 .avatar-utente-object-side img{
      height: 100%;
      object-fit: cover;
+     margin-right: 10px;
 }
 
 .barra-strumenti-object-side {
@@ -226,7 +229,7 @@ main {
      display: flex;
      flex-direction: column;
 
-     overflow-y: scroll;
+
 }
 
 .chat-object {
@@ -264,6 +267,10 @@ main {
      color: grey;
 }
 
+.active {
+     background-color: #ebebeb;
+}
+
 .opacity-0{
      opacity:0;
 }
@@ -289,6 +296,10 @@ main {
      font-size: 14px;
 }
 
+.notifiche-attive{
+     font-weight: 700;
+}
+
 
 
 
@@ -309,6 +320,13 @@ main {
      background-color: #ededed;
 
 }
+
+.bolder {
+     font-weight: 900;
+}
+
+
+
 
 .main-chat{
      height:calc(100% - 120px);
