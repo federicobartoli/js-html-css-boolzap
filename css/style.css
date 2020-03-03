@@ -60,23 +60,54 @@ main {
 }
 
 .aside-1{
-     height: 30%;
+     height: 35%;
      width: 100%;
 
 }
 
 .aside {
-     height: 70%;
+     height: 65%;
      width: 100%;
 
      overflow-y: scroll;
 }
 
 .object-side {
-     height: 50px;
+     padding: 10px 16px;
+     height: 70px;
      background-color: #ededed;
+     display: flex;
+}
+
+.avatar-utente-object-side{
+     width:50%;
+}
+
+.avatar-utente-object-side img{
+     height: 100%;
+     object-fit: cover;
+}
+
+.barra-strumenti-object-side {
+     width: 50%;
+     display: flex;
+     justify-content: flex-end;
+}
+
+.barra-strumenti{
+     width: 50%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.barra-strumenti-object-side i{
+     font-size: 20px;
+     color: #919191;
+     cursor: pointer;
 
 }
+
 
 .notifiche {
      height:80px;
@@ -84,7 +115,7 @@ main {
 }
 
 .barra-di-ricerca {
-     height:calc(100% - 130px);
+     height:calc(100% - 150px);
      background-color: white;
 }
 
@@ -105,14 +136,14 @@ main {
 
 
 .navbar-contatto {
-     height: 50px;
+     height: 70px;
      border-left: 1px solid #e0e0e0;
      background-color: #ededed;
 
 }
 
 .main-chat{
-     height:calc(100% - 100px);
+     height:calc(100% - 120px);
      background-color: white;
 }
 
