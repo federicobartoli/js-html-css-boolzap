@@ -16,6 +16,7 @@
      height: 100vh;
      width: 100vw;
      display: flex;
+     font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -35,6 +36,10 @@
 
 /* Inizio App */
 .container-app {
+     min-width: 1100px;
+     min-height: 600px;
+     max-width: 1100px;
+     max-height: 600px;
      position: absolute;
      top: 50%;
      left: 50%;
@@ -77,6 +82,7 @@ main {
      height: 70px;
      background-color: #ededed;
      display: flex;
+     border-bottom: 1px solid #e0e0e0;
 }
 
 .avatar-utente-object-side{
@@ -110,9 +116,59 @@ main {
 
 
 .notifiche {
+     display: flex;
      height:80px;
-     background-color: lightblue;
+     background-color: #9de1fe;
+     padding: 10px 16px;
+     border-bottom: 1px solid #e0e0e0;
+     padding: 13px 12px 14px 13px;
 }
+
+.bell-side{
+     width:20%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.bell-side {
+     color: white;;
+     font-size: 40px;
+     cursor: pointer;
+}
+
+.bell-notifiche-testo{
+     width: 80%;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+
+}
+
+.bell-notifiche-testo p{
+     color:black;
+     font-size: 15px;
+}
+
+#click-here:hover{
+     text-decoration: underline;
+     cursor: pointer;
+}
+
+#click-here {
+     color: #51666f;
+}
+
+#click-here::after {
+     font-family: 'FontAwesome';
+     padding-left: 5px;
+     content: '\f0da';
+     font-weight: 900;
+     transition: all 0.5s;
+}
+
+
+
 
 .barra-di-ricerca {
      height:calc(100% - 150px);
@@ -128,16 +184,18 @@ main {
 
 /* parte dx */
 .main {
+     display: flex;
+     flex-direction: column;
      height: 100%;
      width: calc(100% - 35%) ;
      background-color: pink;;
+     border-left: 1px solid #e0e0e0;
 
 }
 
 
 .navbar-contatto {
      height: 70px;
-     border-left: 1px solid #e0e0e0;
      background-color: #ededed;
 
 }
