@@ -366,44 +366,51 @@ main {
      background-image: url(../img/wall.png);
      background-size: contain;
      background-repeat: repeat;
-     object-fit: contain;
-     display: flex;
-
 }
 
-.main.chat{
+.main-chat{
      display: flex;
+     align-items: center;
 }
 
-.main-you-chat{
-     display: flex;
-     flex-direction: column;
+.sxs{
+     justify-content: flex-end;
 }
+
+.dxs{
+     justify-content: flex-start;
+}
+
+
 
 .main-chat > .chat-amico{
      margin-top: 10px;
 }
 
-.main-you-chat > .chat-you{
-     margin-top: 10px;
-}
+
 
 .chat-amico{
+     display: flex;
+     flex-direction: column;
      border-radius: 7.5px;
-     height:80px;
-     width:300px;
+     max-width: 40%;
+     padding: 7px 8px 3px;
      background-color: white;
-     margin-bottom: 10px;
-     margin-left: 10px;
+     margin: 1px 80px;
 }
 
 .chat-you {
      background-color: #dcf8c6;
+     margin: 1px 80px;
+     display: flex;
+     flex-direction: column;
      border-radius: 7.5px;
-     height:80px;
-     width:300px;
-     margin-bottom: 10px;
-     margin-left: 10px;
+     max-width: 40%;
+     padding: 7px 8px 3px;
+}
+
+.main-chat p{
+     margin-right: 60px;
 }
 
 .form-writing{
