@@ -361,12 +361,49 @@ main {
 
 
 
-.main-chat{
+.sfondo-chat{
      height:calc(100% - 120px);
      background-image: url(../img/wall.png);
      background-size: contain;
      background-repeat: repeat;
      object-fit: contain;
+     display: flex;
+
+}
+
+.main.chat{
+     display: flex;
+}
+
+.main-you-chat{
+     display: flex;
+     flex-direction: column;
+}
+
+.main-chat > .chat-amico{
+     margin-top: 10px;
+}
+
+.main-you-chat > .chat-you{
+     margin-top: 10px;
+}
+
+.chat-amico{
+     border-radius: 7.5px;
+     height:80px;
+     width:300px;
+     background-color: white;
+     margin-bottom: 10px;
+     margin-left: 10px;
+}
+
+.chat-you {
+     background-color: #dcf8c6;
+     border-radius: 7.5px;
+     height:80px;
+     width:300px;
+     margin-bottom: 10px;
+     margin-left: 10px;
 }
 
 .form-writing{
