@@ -225,8 +225,7 @@ main {
 .chat {
      display: flex;
      flex-direction: column;
-     height:1000px;
-     background-color: blue;
+
      overflow-y: scroll;
 }
 
@@ -254,15 +253,42 @@ main {
 
 .chat-text-utente {
      display: flex;
-     width: 50%;
+     width: 60%;
      flex-direction: column;
+}
+
+.chat-text {
+     font-size: 15px;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     color: grey;
+}
+
+.opacity-0{
+     opacity:0;
 }
 
 .ora-e-notifica{
      display: flex;
+     align-items: center;
      flex-direction: column;
-     
 }
+
+.ora-e-notifica span{
+     margin-top: 5px;
+     height:25px;
+     width:25px;
+     border-radius: 50%;
+     background-color: #06d755;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.ora-e-notifica span p {
+     font-size: 14px;
+}
+
 
 
 
