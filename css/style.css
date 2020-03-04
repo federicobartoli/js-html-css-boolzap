@@ -261,18 +261,19 @@ main {
 .chat {
      display: flex;
      flex-direction: column;
-
-
 }
 
 .chat-object {
      display: flex;
-
      align-items: center;
      height: 72px;
      width: 100%;
      background-color: white;
      border-bottom: 1px solid #f2f2f2;
+}
+
+.chat-object:hover{
+     background-color: #ebebeb;
 }
 
 .avatar-chat-object-dentro{
@@ -366,6 +367,7 @@ main {
      background-image: url(../img/wall.png);
      background-size: contain;
      background-repeat: repeat;
+     overflow-x: auto;
 }
 
 .main-chat{
@@ -383,34 +385,46 @@ main {
 
 
 
-.main-chat > .chat-amico{
-     margin-top: 10px;
+.main-chat > .chat-you{
+     margin-top: 15px;
 }
 
 
 
-.chat-amico{
+.chat-you{
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      border-radius: 7.5px;
      max-width: 40%;
-     padding: 7px 8px 3px;
+     padding: 8px;
      background-color: white;
-     margin: 1px 80px;
+     margin: 5px 10px;
 }
 
-.chat-you {
+.chat-amico {
      background-color: #dcf8c6;
-     margin: 1px 80px;
+     margin: 5px 10px;
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      border-radius: 7.5px;
      max-width: 40%;
-     padding: 7px 8px 3px;
+     padding: 8px ;
 }
+
+
+.chat-you small ,
+.chat-amico small{
+     align-self: flex-end;
+     font-size: 9px;
+     padding-top: 13px;
+}
+
 
 .main-chat p{
-     margin-right: 60px;
+     display: flex;
+     justify-content: center;
+     margin-right: 10px;
+     max-width: 80%;
 }
 
 .form-writing{
