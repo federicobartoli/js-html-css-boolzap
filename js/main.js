@@ -74,7 +74,7 @@ console.log(ciao);
           var messaggioUtente = $('.search-bar-input-messaggio').val();
           console.log(messaggioUtente);
           $('.search-bar-input-messaggio').val('');
-          var messaggio = $('.main-chat.sxs .chat-you').clone();
+          var messaggio = $('.Arianna.main-chat.sxs .chat-you').clone();
           console.log(messaggio);
           messaggio.children('p').text(messaggioUtente);
           messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
@@ -83,13 +83,30 @@ console.log(ciao);
      };
 
      function messaggioAutomatico() {
-          var messaggioAutomatico = $('.main-chat.dxs .chat-amico').clone();
+          var messaggioAutomatico = $('.Arianna.main-chat.dxs .chat-amico').clone();
           messaggioAutomatico.children('p').text('ok');
           console.log(messaggioAutomatico);
           messaggioAutomatico.children('.ok-send').text(ora + ':' + minuti + ampm);
           $('.main-chat2').append(messaggioAutomatico)
      }
 
+     function showChat(){
+       $(".info-chat").click(function () {
+         var chatAttiva = $("#right-side .chat-contenitor.active");
+         var array = ["michele", "fabio", "samuele", "alessandro", "claudia", "davide", "federico", "cj"]
+
+         chatAttiva.removeClass("active");
+         chatAttiva.addClass("d-none")
+
+         var i = 0;
+         while (i < array.length) {
+           if ($(this).is("[riferimento=" + array[i] + "]")) {
+             $(".chat-contenitor" + "." + array[i] + "").addClass("active");
+           }
+           i++;
+         }
+       });
+     }
 
 
      // Funzione per selezionare la chat
@@ -105,7 +122,9 @@ console.log(ciao);
            }
            // $(".main-chat").removeClass("offline-chat");
            if($(".main-chat").hasClass(attributo)){
-               $('.main-chat').removeClass("offline-chat");
+                $('.main-chat').addClass("offline-chat");
+               $('.main-chat' + '.' + attributo + '').removeClass("offline-chat");
+
 
           }else if(!$(".main-chat").hasClass(attributo)){
                $('.main-chat').addClass("offline-chat");
