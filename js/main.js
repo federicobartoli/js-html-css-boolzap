@@ -7,14 +7,14 @@ $(document).ready(function(){
                     break;
 
                default:
-               
+
 
 
           }
      });
      var data = new Date();
-     var ora = data.getHours();
-     var minuti= data.getMinutes()
+     var ora = addZero(data.getHours());
+     var minuti= addZero(data.getMinutes())
      var ampm = ora >= 12 ? 'PM' : 'AM';
 
 
@@ -57,9 +57,13 @@ $(document).ready(function(){
            $("#avatar").text(immagine);
 
        }
-
-
-
+     //Funzione che aggiunge lo 0
+     function addZero(i) {
+          if (i < 10) {
+               i = "0" + i;
+          }
+          return i;
+     }
 
 
 })
