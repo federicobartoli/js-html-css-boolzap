@@ -122,7 +122,7 @@ console.log(ciao);
            }
            // $(".main-chat").removeClass("offline-chat");
            if($(".main-chat").hasClass(attributo)){
-                $('.main-chat').addClass("offline-chat");
+               $('.main-chat').addClass("offline-chat");
                $('.main-chat' + '.' + attributo + '').removeClass("offline-chat");
 
 
