@@ -130,6 +130,16 @@ console.log(ciao);
                $('.main-chat').addClass("offline-chat");
           }
 
+           if($(".avatar").hasClass(attributo)){
+               $('.avatar').addClass("offline-chat");
+               $('.avatar2').addClass("offline-chat");
+               $('.avatar' + '.' + attributo + '').removeClass("offline-chat");
+
+
+          }else if(!$(".main-chat").hasClass(attributo)){
+               $('.avatar').addClass("offline-chat");
+          }
+
            $(".main-chat2").empty();
            var immagine = $(this).attr('avatar');
            $("#avatar").text(immagine);
