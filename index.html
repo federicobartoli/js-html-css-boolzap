@@ -57,9 +57,9 @@
                     </div>
                     <div class="aside">
                               <div class="chat">
-                                   <div class="chat-object">
+                                   <div class="chat-object" nome-utente="Arianna">
                                         <div class="avatar-chat-object-dentro">
-                                             <img src="img/avataaars (4).png" alt="">
+                                             <img avatar="federico" src="img/avataaars (4).png" alt="">
                                         </div>
                                         <div class="chat-text-utente notifiche-attive">
                                         <p>Arianna</p>
@@ -70,9 +70,9 @@
                                              <span><p>2</p></span>
                                         </div>
                                    </div>
-                                   <div class="chat-object">
+                                   <div class="chat-object" nome-utente="Federico">
                                         <div class="avatar-chat-object-dentro">
-                                             <img src="img/avataaars (1).png" alt="">
+                                             <img avatar="federico" src="img/avataaars (1).png" alt="">
                                         </div>
                                         <div class="chat-text-utente notifiche-attive">
                                         <p>Federico</p>
@@ -83,7 +83,7 @@
                                              <span><p>1</p></span>
                                         </div>
                                    </div>
-                                   <div class="chat-object active">
+                                   <div class="chat-object active "nome-utente="Alessandro">
                                         <div class="avatar-chat-object-dentro">
                                              <img src="img/avataaars (5).png" alt="">
                                         </div>
@@ -96,7 +96,7 @@
                                              <span class="opacity-0"><p>2</p></span>
                                         </div>
                                    </div>
-                                   <div class="chat-object">
+                                   <div class="chat-object" nome-utente="Roberta">
                                         <div class="avatar-chat-object-dentro">
                                              <img src="img/avataaars (6).png" alt="">
                                         </div>
@@ -235,8 +235,8 @@
                          <div class="navbar-contatto">
                               <div class="object-side">
                               <div class="avatar-utente-object-side">
-                              <img src="img/avataaars (5).png" alt="">
-                              <p class="bolder">Alessandro</p>
+                              <img id="avatar" src="img/avataaars (5).png" alt="">
+                              <p id="nome-utente" class="bolder">Alessandro</p>
                               </div>
                               <div class="barra-strumenti-object-side">
                                    <div class="barra-strumenti">
@@ -249,10 +249,10 @@
 
                          </div>
                          <div class="sfondo-chat">
-                              <div class="main-chat sxs">
+                              <div class="main-chat sxs ">
                                    <div class="chat-you">
                                         <p>ciao!</p>
-                                        <small>9.18 AM</small>
+                                        <small class="ok-send">9.18 AM</small>
                                    </div>
 
 
@@ -268,84 +268,32 @@
 
                                    </div>
                               </div>
-                              <div class="main-chat sxs">
-                                   <div class="chat-you">
-                                        <p>Tutto bene dai...tu? Che racconti?🐶</p>
-                                        <small>9.20 AM</small>
-                                   </div>
-
-
-
+                              <div class="main-chat sxs2">
 
                               </div>
-                              <div class="main-chat dxs">
-                                   <div class="chat-amico">
-                                        <p>Racconto che sono alle maldive...🐱</p>
-                                        <small>9.22 AM</small>
-
-
-                                   </div>
-                              </div>
-                              <div class="main-chat sxs">
-                                   <div class="chat-you">
-                                        <p>..che spettacoloooooo😀</p>
-                                        <small>10.40 AM</small>
-                                   </div>
 
 
 
 
-                              </div>
-                              <div class="main-chat dxs">
-                                   <div class="chat-amico">
-                                        <p>Si...mi sto godendo il mare...alla faccia tua 🐧</p>
-                                        <small>01.02 PM</small>
-
-
-                                   </div>
-                              </div>
-                              <div class="main-chat sxs">
-                                   <div class="chat-you">
-                                        <p>...ma come!!!!!Grazie eh!!!🌷🦋👼🤱🐚🍄💫🌬</p>
-                                        <small>03.18 PM</small>
-                                   </div>
 
 
 
 
-                              </div>
-                              <div class="main-chat dxs">
-                                   <div class="chat-amico">
-                                        <p>Ahahahah...daiii scherzavo!🥠🥚🏉🥉🤽‍♀🤽‍♀🤾‍♀👩‍🎓🏪⌛</p>
-                                        <small>04.00 PM</small>
 
 
-                                   </div>
-                              </div>
-                              <div class="main-chat sxs">
-                                   <div class="chat-you">
-                                        <p>😀Divertiti..!</p>
-                                        <small>05.00 AM</small>
-                                   </div>
-
-
-
-
-                              </div>
-                              
                          </div>
 
                          <div class="form-writing">
                               <div class="emoticon">
                                    <i class="far fa-grin-stars"></i>
                               </div>
-                                   <div class="placeholder-messaggio">Scrivi un messaggio</div>
+                                   <!-- <div class="placeholder-messaggio">Scrivi un messaggio</div> -->
                                    <label class="search-bar-messaggio">
-                                        <input class="search-bar-input-messaggio" type="text" title="" value="">
+                                        <input class="search-bar-input-messaggio" type="text" title="" placeholder="scrivi un messaggio...">
                                    </label>
 
                               <div class="mic">
-                                   <i class="fas fa-microphone"></i>
+                                   <i id="invia-messaggio" class="fas fa-microphone"></i>
                               </div>
                          </div>
                     </div>

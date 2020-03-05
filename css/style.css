@@ -65,7 +65,7 @@ main {
 }
 
 .aside-1{
-     height: 35%;
+     height: 210px;
      width: 100%;
 
 }
@@ -91,7 +91,7 @@ main {
 }
 
 .avatar-utente-object-side img{
-     height: 100%;
+     height: 50px;
      object-fit: cover;
      margin-right: 10px;
 }
@@ -171,7 +171,7 @@ main {
 
 
 .barra-di-ricerca {
-     height:calc(100% - 150px);
+     height: 60px;
      background-color: #f7f7f7;
      display: flex;
      justify-content: center;
@@ -251,11 +251,13 @@ main {
      line-height: 20px;
      padding-left: 10px;
      min-height: 20px;
-     width: 300px;
+     width: 500px;
      outline: none;
      background-color: transparent;
      border: none;
 }
+
+
 
 
 .chat {
@@ -372,15 +374,47 @@ main {
 
 .main-chat{
      display: flex;
-     align-items: center;
+     flex-direction: column;
+
 }
 
+
+
 .sxs{
+     align-items: flex-end;
+}
+.sxs2{
+     align-items: flex-end ;
+}
+.lista-nomi{
+     display: flex;
+     flex-direction: column;
      justify-content: flex-end;
+     margin-right: 10px;
+     max-width: 80%;
+
 }
 
 .dxs{
-     justify-content: flex-start;
+     align-items: flex-start;
+}
+
+.check-send::after{
+     font-family: 'FontAwesome';
+     padding-left: 5px;
+     content: '\f00c';
+     font-weight: 900;
+     transition: all 0.5s;
+     color:#acb68f;
+}
+
+.ok-send::after{
+     font-family: 'FontAwesome';
+     padding-left: 5px;
+     content: '\f560';
+     font-weight: 900;
+     transition: all 0.5s;
+     color:#acb68f;
 }
 
 
@@ -395,7 +429,7 @@ main {
      display: flex;
      flex-direction: row;
      border-radius: 7.5px;
-     max-width: 40%;
+     max-width: 48%;
      padding: 8px;
      background-color: white;
      margin: 5px 10px;
@@ -407,7 +441,7 @@ main {
      display: flex;
      flex-direction: row;
      border-radius: 7.5px;
-     max-width: 40%;
+     max-width: 48%;
      padding: 8px ;
 }
 
