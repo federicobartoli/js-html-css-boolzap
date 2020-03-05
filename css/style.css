@@ -378,6 +378,19 @@ main {
 
 }
 
+.main-chat2{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+
+}
+.chat-di-prova{
+     display: flex;
+     flex-direction: column;
+
+}
+
 
 
 .sxs{
@@ -396,6 +409,9 @@ main {
 }
 
 .dxs{
+     align-items: flex-start;
+}
+.dxs2{
      align-items: flex-start;
 }
 
@@ -433,6 +449,7 @@ main {
      padding: 8px;
      background-color: white;
      margin: 5px 10px;
+     align-self: flex-end;
 }
 
 .chat-amico {
@@ -443,6 +460,7 @@ main {
      border-radius: 7.5px;
      max-width: 48%;
      padding: 8px ;
+     align-self: flex-start;
 }
 
 

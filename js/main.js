@@ -18,20 +18,11 @@ $(document).ready(function(){
      var ampm = ora >= 12 ? 'PM' : 'AM';
 
 
+
+
+
      $(".chat-object").click(chat);
-
-          $('#invia-messaggio').click(invioMessaggio);
-
-          function invioMessaggio() {
-               var messaggioUtente = $('.search-bar-input-messaggio').val();
-               console.log(messaggioUtente);
-               $('.search-bar-input-messaggio').val('');
-               var messaggio = $('.main-chat.sxs .chat-you').clone();
-               console.log(messaggio);
-               messaggio.children('p').text(messaggioUtente);
-               messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
-               $('.main-chat.sxs2').append(messaggio);
-          };
+     $('#invia-messaggio').click(invioMessaggio);
 
 
 
@@ -40,9 +31,31 @@ $(document).ready(function(){
 
 
 
+     function invioMessaggio() {
+          var messaggioUtente = $('.search-bar-input-messaggio').val();
+          console.log(messaggioUtente);
+          $('.search-bar-input-messaggio').val('');
+          var messaggio = $('.main-chat.sxs .chat-you').clone();
+          console.log(messaggio);
+          messaggio.children('p').text(messaggioUtente);
+          messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
+
+          $('.main-chat2').append(messaggio)
+
+          setTimeout(messaggioAutomatico, 1000);
+
+     };
+
+     function messaggioAutomatico() {
+          var messaggioAutomatico = $('.main-chat.dxs .chat-amico').clone();
+          messaggioAutomatico.children('p').text('ok');
+          console.log(messaggioAutomatico);
+          messaggioAutomatico.children('.ok-send').text(ora + ':' + minuti + ampm);
+          $('.main-chat2').append(messaggioAutomatico)
 
 
 
+     }
 
 
 
