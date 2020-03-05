@@ -98,9 +98,19 @@ console.log(ciao);
            $(".chat-object").removeClass("active");
            $(this).addClass("active");
            var attributo = $(this).attr('nome-utente');
+           console.log(attributo);
            $("#nome-utente").text(attributo);
-           $(".main-chat").removeClass("offline-chat");
-           // $(this).addClass("active");
+           for (var i = 0; i < attributo; i++) {
+                console.log(attributo[i]);
+           }
+           // $(".main-chat").removeClass("offline-chat");
+           if($(".main-chat").hasClass(attributo)){
+               $('.main-chat').removeClass("offline-chat");
+
+          }else if(!$(".main-chat").hasClass(attributo)){
+               $('.main-chat').addClass("offline-chat");
+          }
+
            $(".main-chat2").empty();
            var immagine = $(this).attr('avatar');
            $("#avatar").text(immagine);
