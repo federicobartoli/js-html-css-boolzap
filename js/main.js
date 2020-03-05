@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-     $(document).keydown(function(event){
+     $('.search-bar-input-messaggio').keydown(function(event){
           switch (event.key) {
                case 'Enter':
                invioMessaggio();
@@ -12,21 +12,30 @@ $(document).ready(function(){
 
           }
      });
+     //DATA
      var data = new Date();
      var ora = addZero(data.getHours());
      var minuti= addZero(data.getMinutes())
      var ampm = ora >= 12 ? 'PM' : 'AM';
 
-
-
-
-
+     //EVOCO FUNZIONI
      $(".chat-object").click(chat);
      $('#invia-messaggio').click(invioMessaggio);
 
 
 
-
+     $('.search-bar-input').keyup(function(event){
+          var ricercaContatto = $(this).val().toLowerCase();
+          console.log(ricercaContatto);
+          $('.chat-text-utente p').each(function(){
+               console.log($(this).text());
+               if($(this).text().toLowerCase().includes(ricercaContatto)){
+                    $(this).parentsUntil('.chat').show();
+               }else {
+                    $(this).parentsUntil('.chat').hide();
+               }
+          })
+     })
 
 
 
@@ -39,10 +48,8 @@ $(document).ready(function(){
           console.log(messaggio);
           messaggio.children('p').text(messaggioUtente);
           messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
-
           $('.main-chat2').append(messaggio)
-
-          setTimeout(messaggioAutomatico, 1000);
+          setTimeout(messaggioAutomatico, 1000); //Rispondo dopo un secondo
 
      };
 
@@ -52,9 +59,6 @@ $(document).ready(function(){
           console.log(messaggioAutomatico);
           messaggioAutomatico.children('.ok-send').text(ora + ':' + minuti + ampm);
           $('.main-chat2').append(messaggioAutomatico)
-
-
-
      }
 
 
@@ -70,7 +74,7 @@ $(document).ready(function(){
            $("#avatar").text(immagine);
 
        }
-     //Funzione che aggiunge lo 0
+     //Funzione che aggiunge lo 0 alla data
      function addZero(i) {
           if (i < 10) {
                i = "0" + i;
