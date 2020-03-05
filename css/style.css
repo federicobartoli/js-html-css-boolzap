@@ -511,3 +511,7 @@ main {
      color: #919191;
      cursor: pointer;
 }
+
+.offline-chat {
+     display: none;
+}

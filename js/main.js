@@ -1,5 +1,5 @@
 $(document).ready(function(){
-     ciao = [] 
+     ciao = []
      $('.search-bar-input-messaggio').keydown(function(event){
           switch (event.key) {
                case 'Enter':
@@ -67,6 +67,7 @@ console.log(ciao);
 
 
      function invioMessaggio() {
+          console.log('ciaobababa');
           $('.fa-paper-plane').addClass('nascosto');
           $('.fa-microphone').removeClass('nascosto');
           ciao.length = 0;
@@ -79,7 +80,6 @@ console.log(ciao);
           messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
           $('.main-chat2').append(messaggio)
           setTimeout(messaggioAutomatico, 1000); //Rispondo dopo un secondo
-
      };
 
      function messaggioAutomatico() {
@@ -99,6 +99,9 @@ console.log(ciao);
            $(this).addClass("active");
            var attributo = $(this).attr('nome-utente');
            $("#nome-utente").text(attributo);
+           $(".main-chat").removeClass("offline-chat");
+           // $(this).addClass("active");
+           $(".main-chat2").empty();
            var immagine = $(this).attr('avatar');
            $("#avatar").text(immagine);
 
