@@ -1,16 +1,28 @@
 $(document).ready(function(){
 
-     // $(document).keydown(function(event){}
+     $(document).keydown(function(event){
+          switch (event.key) {
+               case 'Enter':
+               invioMessaggio();
+                    break;
+
+               default:
+               
+
+
+          }
+     });
      var data = new Date();
      var ora = data.getHours();
      var minuti= data.getMinutes()
      var ampm = ora >= 12 ? 'PM' : 'AM';
-     
-     invioMessaggio();
-     $(".chat-object").click(chat);
-     function invioMessaggio() {
 
-          $('#invia-messaggio').click(function(){
+
+     $(".chat-object").click(chat);
+
+          $('#invia-messaggio').click(invioMessaggio);
+
+          function invioMessaggio() {
                var messaggioUtente = $('.search-bar-input-messaggio').val();
                console.log(messaggioUtente);
                $('.search-bar-input-messaggio').val('');
@@ -19,10 +31,12 @@ $(document).ready(function(){
                messaggio.children('p').text(messaggioUtente);
                messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
                $('.main-chat.sxs2').append(messaggio);
+          };
 
 
-          });
-     }
+
+
+
 
 
 
