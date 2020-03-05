@@ -1,12 +1,16 @@
 $(document).ready(function(){
-
+     ciao = [] 
      $('.search-bar-input-messaggio').keydown(function(event){
           switch (event.key) {
                case 'Enter':
                invioMessaggio();
+
+
+
                     break;
 
                default:
+
 
 
 
@@ -20,11 +24,33 @@ $(document).ready(function(){
 
      //EVOCO FUNZIONI
      $(".chat-object").click(chat);
-     $('#invia-messaggio').click(invioMessaggio);
+     $('.mic').click(invioMessaggio);
 
 
 
-     $('.search-bar-input').keyup(function(event){
+
+     $('.search-bar-input-messaggio').keydown(function(event){
+          var ciaos = ciao.push($(this).val());
+          console.log(ciaos);
+          if (ciao.length > 0) {
+               $('.fa-paper-plane').removeClass('nascosto');
+               $('.fa-microphone').addClass('nascosto');
+          } else {
+
+          }
+     })
+
+console.log(ciao);
+
+
+
+
+
+
+
+
+
+     $('.search-bar-input').keydown(function(event){
           var ricercaContatto = $(this).val().toLowerCase();
           console.log(ricercaContatto);
           $('.chat-text-utente p').each(function(){
@@ -41,6 +67,9 @@ $(document).ready(function(){
 
 
      function invioMessaggio() {
+          $('.fa-paper-plane').addClass('nascosto');
+          $('.fa-microphone').removeClass('nascosto');
+          ciao.length = 0;
           var messaggioUtente = $('.search-bar-input-messaggio').val();
           console.log(messaggioUtente);
           $('.search-bar-input-messaggio').val('');

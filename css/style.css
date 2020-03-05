@@ -497,6 +497,10 @@ main {
      width:80%;
 }
 
+.nascosto {
+     display: none;
+}
+
 .mic{
      padding-left: 40px;
      width: 10%;
