@@ -1,23 +1,35 @@
 $(document).ready(function(){
 
      // $(document).keydown(function(event){}
-
-     $('#invia-messaggio').click(function(){
-          var messaggioUtente = $('.search-bar-input-messaggio').val();
-          console.log(messaggioUtente);
-          $('.search-bar-input-messaggio').val('');
-          var messaggio = $('.main-chat.sxs .chat-you').clone();
-          console.log(messaggio);
-          messaggio.children('p').text(messaggioUtente);
-          $('.main-chat.sxs2').append(messaggio);
-
-
-     });
-
-
-
-
+     var data = new Date();
+     var ora = data.getHours();
+     var minuti= data.getMinutes()
+     var ampm = ora >= 12 ? 'PM' : 'AM';
+     
+     invioMessaggio();
      $(".chat-object").click(chat);
+     function invioMessaggio() {
+
+          $('#invia-messaggio').click(function(){
+               var messaggioUtente = $('.search-bar-input-messaggio').val();
+               console.log(messaggioUtente);
+               $('.search-bar-input-messaggio').val('');
+               var messaggio = $('.main-chat.sxs .chat-you').clone();
+               console.log(messaggio);
+               messaggio.children('p').text(messaggioUtente);
+               messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
+               $('.main-chat.sxs2').append(messaggio);
+
+
+          });
+     }
+
+
+
+
+
+
+
 
 
      // Funzione per selezionare la chat
