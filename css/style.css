@@ -362,7 +362,9 @@ main {
 }
 
 
-
+#ultimo-accesso {
+     align-items: flex-end;
+}
 
 .sfondo-chat{
      height:calc(100% - 120px);

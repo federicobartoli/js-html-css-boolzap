@@ -26,6 +26,13 @@ $(document).ready(function(){
      $(".chat-object").click(chat);
      $('.mic').click(invioMessaggio);
 
+     $('.search-bar-input-messaggio').focus(function() {
+        // console.log('focus');
+        $('.mic i').toggleClass('fa fa-microphone fas fa-paper-plane');
+    }).blur(function () {
+        // console.log('uscito dal focus');
+        $('.mic i').toggleClass('fa fa-microphone fas fa-paper-plane');
+    });
 
 
 
@@ -41,14 +48,6 @@ $(document).ready(function(){
      })
 
 console.log(ciao);
-
-
-
-
-
-
-
-
 
      $('.search-bar-input').keydown(function(event){
           var ricercaContatto = $(this).val().toLowerCase();
@@ -72,15 +71,25 @@ console.log(ciao);
           $('.fa-microphone').removeClass('nascosto');
           ciao.length = 0;
           var messaggioUtente = $('.search-bar-input-messaggio').val();
-          console.log(messaggioUtente);
-          $('.search-bar-input-messaggio').val('');
-          var messaggio = $('.Arianna.main-chat.sxs .chat-you').clone();
-          console.log(messaggio);
-          messaggio.children('p').text(messaggioUtente);
-          messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
-          $('.main-chat2').append(messaggio)
-          setTimeout(messaggioAutomatico, 1000); //Rispondo dopo un secondo
+          if(messaggioUtente.trim().length > 0) {
+               console.log(messaggioUtente);
+               $('.search-bar-input-messaggio').val('');
+               var messaggio = $('.Arianna.main-chat.sxs .chat-you').clone();
+               console.log(messaggio);
+               messaggio.children('p').text(messaggioUtente);
+               messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
+               $('.main-chat2').append(messaggio)
+               scroll()
+               setTimeout(messaggioAutomatico, 1000);
+               scroll()
+          }
      };
+
+     function scroll() {
+          var pixelScroll = $('.sfondo-chat').height();
+          $('.sfondo-chat').scrollTop(pixelScroll);
+     }
+
 
      function messaggioAutomatico() {
           var messaggioAutomatico = $('.Arianna.main-chat.dxs .chat-amico').clone();
@@ -152,6 +161,8 @@ console.log(ciao);
           }
           return i;
      }
+
+
 
 
 })
