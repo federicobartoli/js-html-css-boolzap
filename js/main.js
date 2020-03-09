@@ -23,8 +23,22 @@ $(document).ready(function(){
      var ampm = ora >= 12 ? 'PM' : 'AM';
      $(".chat-object").click(chat);
      //EVOCO FUNZIONI
-     $(document).on('click' , function() {
-          $(".chat-object").click(chat);
+     $(document).on('click', '.chat-object', chat);
+     $(document).on('click', '.chat-you', function() {
+          $(this).children('.menu-a-comparsa').toggle();
+     });
+     $(document).on('click', '.chat-amico', function() {
+          $(this).children('.menu-a-comparsa2').toggle();
+     });
+     $(document).on('click', '.elimina', function(){
+          console.log('elemento cliccato', $(this))
+          $(this).parents(".chat-you").remove();
+          $(this).parents(".chat-amico").remove();
+          //$(this).click(eliminaMsg);
+     });
+
+     /*$(document).on('click' , function() {
+          //$(".chat-object").click(chat);
           $('.chat-you').click(function() {
                $(this).children('.menu-a-comparsa').toggle();
 
@@ -41,6 +55,7 @@ $(document).ready(function(){
 
           })
           $('.elimina').click(function(){
+               console.log('elemento cliccato', $(this))
                $(this).click(eliminaMsg);
           })
 
@@ -49,7 +64,7 @@ $(document).ready(function(){
 
 
 
-     })
+     })*/
 
 
 

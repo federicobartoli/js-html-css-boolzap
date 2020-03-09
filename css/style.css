@@ -638,7 +638,7 @@ main {
      display: none;
      text-align: center;
      box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
-     opacity: 0.8;
+     
      border: 0.5px solid black;
      z-index: 99;
 }
@@ -652,7 +652,7 @@ z-index: 99;
      display: none;
      text-align: center;
      box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
-     opacity: 0.8;
+
      border: 0.5px solid black;
 }
 
