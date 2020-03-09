@@ -139,6 +139,7 @@ $(document).ready(function(){
            $(".chat-object").removeClass("active");
            $(this).addClass("active");
            $(this).children('.ora-e-notifica').children('span').addClass('nascosto');
+           $(this).children('.chat-text-utente').removeClass('notifiche-attive');
            var attributo = $(this).attr('nome-utente');
            // console.log(attributo);
            $("#nome-utente").text(attributo);
