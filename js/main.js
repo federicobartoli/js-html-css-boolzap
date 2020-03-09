@@ -21,9 +21,28 @@ $(document).ready(function(){
      var ora = addZero(data.getHours());
      var minuti= addZero(data.getMinutes())
      var ampm = ora >= 12 ? 'PM' : 'AM';
+     $(".chat-object").click(chat);
+     //EVOCO FUNZIONI
+     $(document).on('click' , function() {
+          $(".chat-object").click(chat);
+     })
+
+
+
+     $('.fa-plus-circle').click(function() {
+          $('.inserisci-nome').toggle();
+          $('.fa-file-import').click(function() {
+               var nome = $('.in-search-bar-input').val();                 // Prendo il valore dell'input NOME
+               $('.chat').append('<div class="chat-object" nome-utente="'+ nome +'"><div class="avatar-chat-object-dentro"><img avatar="'+ nome +'" src="img/avataaars.png" alt=""></div><div class="chat-text-utente notifiche-attive"><p>' + nome + '</p><small class="chat-text">'+ '' +'</small></div></div>');
+               $('.inserisci-nome').hide();
+               scroll2();
+          })
+     })
+
+
 
      //EVOCO FUNZIONI
-     $(".chat-object").click(chat);
+
      $('.mic').click(invioMessaggio);
 
      $('.search-bar-input-messaggio').focus(function() {
@@ -64,7 +83,6 @@ $(document).ready(function(){
 
 
 
-
      function invioMessaggio() {
           // console.log('ciaobababa');
           $('.fa-paper-plane').addClass('nascosto');
@@ -91,6 +109,12 @@ $(document).ready(function(){
      function scroll() {
           var pixelScroll = $('.sfondo-chat').height();
           $('.sfondo-chat').scrollTop(pixelScroll);
+          console.log('ho fatto lo scroll');
+     }
+
+     function scroll2() {
+          var pixelScroll2 = $('.aside').height();
+          $('.aside').scrollTop(pixelScroll2);
           console.log('ho fatto lo scroll');
      }
 
@@ -136,6 +160,8 @@ $(document).ready(function(){
 
           }else if(!$(".main-chat").hasClass(attributo)){
                $('.avatar').addClass("offline-chat");
+               $('.utente').removeClass("offline-chat");
+
           }
 
            $(".main-chat2").empty();
