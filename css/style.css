@@ -311,6 +311,10 @@ main {
      opacity:0;
 }
 
+.nascosto{
+     opacity: 0;
+}
+
 .ora-e-notifica{
      display: flex;
      align-items: center;
