@@ -28,14 +28,40 @@ $(document).ready(function(){
           $('.chat-you').click(function() {
                $(this).children('.menu-a-comparsa').toggle();
 
+
+
+
           })
+
           $('.chat-amico').click(function() {
                $(this).children('.menu-a-comparsa2').toggle();
 
+
+
+
           })
+          $('.elimina').click(function(){
+               $(this).click(eliminaMsg);
+          })
+
+
+
+
+
+
      })
 
 
+
+     function eliminaMsg() {
+          $(this).parents(".chat-you").remove();
+          $(this).parents(".chat-amico").remove()
+     }
+     function eliminaMsg2() {
+          $(".main-chat .menu-a-comparsa").toggle();
+          $(this).parents(".chat-amico").remove();
+          $(".main-chat .menu-a-comparsa").toggle();
+     }
 
 
 
@@ -109,14 +135,16 @@ $(document).ready(function(){
                // console.log(messaggio);
                messaggio.children('p').text(messaggioUtente);
                messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
-               $('.main-chat2').append(messaggio);
                console.log('chiamata scroll1');
                scroll()
                setTimeout(messaggioAutomatico, 1000);
                console.log('chiamata scroll2');
                scroll()
+               var thisfunction = $('.main-chat2').append(messaggio);
+
 
           }
+
      };
 
      function scroll() {
@@ -193,6 +221,7 @@ $(document).ready(function(){
      }
 
 
+     console.log(these);
 
 
 })
