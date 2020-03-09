@@ -548,6 +548,7 @@ main {
      background-color: white;
      margin: 5px 10px;
      align-self: flex-end;
+     position: relative;
 }
 
 .chat-amico {
@@ -559,6 +560,7 @@ main {
      max-width: 48%;
      padding: 8px;
      align-self: flex-start;
+     position: relative;
 }
 
 
@@ -612,4 +614,47 @@ main {
 
 .offline-chat {
      display: none;
+}
+
+.fa-caret-down {
+     display: none;
+     color:green;
+     margin-left: 5px;
+}
+
+.chat-you:hover .fa-caret-down,
+.chat-amico:hover .fa-caret-down{
+     display: block;
+}
+
+.menu-a-comparsa {
+
+     position: absolute;
+     top:35px;
+     right:0px;
+     width: 120px;
+     height: 50px;
+     background-color: #ededed;
+     display: none;
+     text-align: center;
+     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+     opacity: 0.8;
+     border: 0.5px solid black;
+}
+.menu-a-comparsa2 {
+
+     position: absolute;
+     top:35px;
+     width: 120px;
+     height: 50px;
+     background-color: #ededed;
+     display: none;
+     text-align: center;
+     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+     opacity: 0.8;
+     border: 0.5px solid black;
+}
+
+.opacitynone{
+     opacity: 0;
 }

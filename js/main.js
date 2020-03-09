@@ -25,7 +25,17 @@ $(document).ready(function(){
      //EVOCO FUNZIONI
      $(document).on('click' , function() {
           $(".chat-object").click(chat);
+          $('.chat-you').click(function() {
+               $(this).children('.menu-a-comparsa').toggle();
+
+          })
+          $('.chat-amico').click(function() {
+               $(this).children('.menu-a-comparsa2').toggle();
+
+          })
      })
+
+
 
 
 
@@ -99,7 +109,7 @@ $(document).ready(function(){
                // console.log(messaggio);
                messaggio.children('p').text(messaggioUtente);
                messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
-               $('.main-chat2').append(messaggio)
+               $('.main-chat2').append(messaggio);
                console.log('chiamata scroll1');
                scroll()
                setTimeout(messaggioAutomatico, 1000);
