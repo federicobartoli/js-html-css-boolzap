@@ -71,7 +71,7 @@ $(document).ready(function(){
 //
 // console.log(ciao);
 
-     $('.search-bar-input').keydown(function(event){
+     $('.search-bar-input').keyup(function(event){
           var ricercaContatto = $(this).val().toLowerCase();
           // console.log(ricercaContatto);
           $('.chat-text-utente p').each(function(){
