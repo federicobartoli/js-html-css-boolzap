@@ -33,7 +33,7 @@ $(document).ready(function(){
           $('.inserisci-nome').toggle();
           $('.fa-file-import').click(function() {
                var nome = $('.in-search-bar-input').val();                 // Prendo il valore dell'input NOME
-               $('.chat').append('<div class="chat-object" nome-utente="'+ nome +'"><div class="avatar-chat-object-dentro"><img avatar="'+ nome +'" src="img/avataaars.png" alt=""></div><div class="chat-text-utente notifiche-attive"><p>' + nome + '</p><small class="chat-text">'+ '' +'</small></div></div>');
+               $('.chat').append('<div class="chat-object" nome-utente="'+ nome +'"><div class="avatar-chat-object-dentro"><img avatar="'+ nome +'" src="img/avataaars.png" alt=""></div><div class="chat-text-utente notifiche-attive"><p>' + nome + '</p><small class="chat-text">'+ '' +'</small></div><div class="ora-e-notifica"><small>' + ora + ':'+ minuti + ampm + ' </small></div></div>');
                $('.inserisci-nome').hide();
                scroll2();
           })
@@ -160,6 +160,7 @@ $(document).ready(function(){
 
           }else if(!$(".main-chat").hasClass(attributo)){
                $('.avatar').addClass("offline-chat");
+               $('.avatar2').addClass("offline-chat");
                $('.utente').removeClass("offline-chat");
 
           }
