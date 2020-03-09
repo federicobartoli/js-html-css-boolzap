@@ -27,6 +27,10 @@
 
 }
 
+.nascosta {
+     display: none;
+}
+
 
 .container-green{
      width: 100%;
