@@ -22,6 +22,15 @@ $(document).ready(function(){
      var minuti= addZero(data.getMinutes())
      var ampm = ora >= 12 ? 'PM' : 'AM';
      $(".chat-object").click(chat);
+
+     $(".chat-object").click(function(){
+          $('.main').addClass('visibile-750')
+          $('.aside-general').addClass('non-visibile-750')
+     });
+     $(".fa-undo-alt").click(function(){
+          $('.main').removeClass('visibile-750')
+          $('.aside-general').removeClass('non-visibile-750')
+     });
      //EVOCO FUNZIONI
      $(document).on('click', '.chat-object', chat);
      $(document).on('click', '.chat-you', function() {
@@ -163,15 +172,14 @@ $(document).ready(function(){
      };
 
      function scroll() {
-          var pixelScroll = $('.sfondo-chat').height();
+          var pixelScroll = $('.sfondo-chat').prop('scrollHeight')
           $('.sfondo-chat').scrollTop(pixelScroll);
           console.log('ho fatto lo scroll');
      }
 
      function scroll2() {
-          var pixelScroll2 = $('.aside').height();
+          var pixelScroll2 = $('.aside').prop('scrollHeight')
           $('.aside').scrollTop(pixelScroll2);
-          console.log('ho fatto lo scroll');
      }
 
 
