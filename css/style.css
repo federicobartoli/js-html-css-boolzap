@@ -632,7 +632,7 @@ main {
      position: absolute;
      top:35px;
      right:0px;
-     width: 120px;
+     width: 100px;
      height: 50px;
      background-color: #ededed;
      display: none;
@@ -645,7 +645,7 @@ main {
 
      position: absolute;
      top:35px;
-     width: 120px;
+     width: 100px;
      height: 50px;
      background-color: #ededed;
      display: none;
