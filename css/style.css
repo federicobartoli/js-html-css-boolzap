@@ -548,14 +548,14 @@ main {
      border-radius: 7.5px;
      max-width: 48%;
      padding: 8px;
-     background-color: white;
+     background-color: #dcf8c6;
      margin: 5px 10px;
      align-self: flex-end;
      position: relative;
 }
 
 .chat-amico {
-     background-color: #dcf8c6;
+     background-color: white;
      margin: 5px 10px;
      display: flex;
      flex-direction: row;
