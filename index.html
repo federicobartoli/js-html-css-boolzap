@@ -3,8 +3,10 @@
      <head>
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <meta charset="utf-8">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" charset="utf-8"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
           <script src="https://kit.fontawesome.com/4aa4c430a6.js" crossorigin="anonymous"></script>
           <link rel="stylesheet" href="css/style.css">
           <title>Whatsapp Web</title>
@@ -71,7 +73,7 @@
                     </div>
                     <div class="aside">
                               <div class="chat">
-                                   <div class="chat-object" nome-utente="Arianna">
+                                   <!-- <div class="chat-object" nome-utente="Arianna">
                                         <div class="avatar-chat-object-dentro">
                                              <img avatar="federico" src="img/avataaars (4).png" alt="">
                                         </div>
@@ -174,20 +176,22 @@
                                              <small>5:18PM</small>
                                              <span><p>2</p></span>
                                         </div>
-                                   </div>
-                                   <div class="chat-object" nome-utente="Arianna">
-                                        <div class="avatar-chat-object-dentro">
-                                             <img src="img/avataaars (4).png" alt="">
+                                   </div> -->
+                                   <script id="template-utente" type="text/x-handlebars-template">
+                                        <div class="chat-object {{activeNoActive}}" nome-utente="{{nome}}">
+                                             <div class="avatar-chat-object-dentro">
+                                                  <img src="img/{{avatar}}.png" alt="">
+                                             </div>
+                                             <div class="chat-text-utente">
+                                             <p>{{nome}}</p>
+                                             <small class="chat-text">{{chat}}</small>
+                                             </div>
+                                             <div class="ora-e-notifica">
+                                                  <small>5:18PM</small>
+                                                  <span><p>{{notifiche}}</p></span>
+                                             </div>
                                         </div>
-                                        <div class="chat-text-utente">
-                                        <p>Arianna</p>
-                                        <small class="chat-text">😀🐶🐱🐰</small>
-                                        </div>
-                                        <div class="ora-e-notifica">
-                                             <small>5:18PM</small>
-                                             <span><p>2</p></span>
-                                        </div>
-                                   </div>
+                                   </script>
 
                               </div>
 

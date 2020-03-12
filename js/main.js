@@ -1,4 +1,46 @@
 $(document).ready(function(){
+
+
+     var source = $('#template-utente').html();              // clono il template messaggio
+     var template = Handlebars.compile(source);
+
+     var utenti = [
+         {
+             nome: 'Arianna',
+             avatar: 'avataaars (4)',
+             chat: '😀🐶🐱🐰',
+             notifiche: generaRandomMinMax(1, 9),
+         },
+         {
+              nome: 'Federico',
+             avatar: 'avataaars (1)',
+             chat: 'ehylà!',
+             notifiche: generaRandomMinMax(1, 9),
+
+         },
+         {
+              nome: 'Alessandro',
+            avatar: 'avataaars (5)',
+            chat: 'divertiti ciccio',
+            notifiche: generaRandomMinMax(1, 9),
+            activeNoActive: 'active',
+         }
+
+
+
+     ];
+
+     console.log(utenti);
+
+     for (var i = 0; i < utenti.length; i++) {
+          var templatePopolato = template(utenti[i]);         // Popolo il templateUtente con i dati presi dall'oggetto UTENTE
+          $('.chat').append(templatePopolato);                 // Aggiungo il template così popolato al div #risultato.
+     }
+
+
+
+
+
      ciao = []
      $('.search-bar-input-messaggio').keydown(function(event){
           switch (event.key) {
@@ -93,8 +135,18 @@ $(document).ready(function(){
           $('.inserisci-nome').toggle();
           $('.fa-file-import').click(function() {
                var nome = $('.in-search-bar-input').val();
-               if(nome.trim().length > 0) {                 // Prendo il valore dell'input NOME
-                    $('.chat').append('<div class="chat-object" nome-utente="'+ nome +'"><div class="avatar-chat-object-dentro"><img avatar="'+ nome +'" src="img/avataaars.png" alt=""></div><div class="chat-text-utente notifiche-attive"><p>' + nome + '</p><small class="chat-text">'+ '' +'</small></div><div class="ora-e-notifica"><small>' + ora + ':'+ minuti + ampm + ' </small></div></div>');
+               if(nome.trim().length > 0) {
+                                   // Prendo il valore dell'input NOME
+                    var contattoNuovo = {
+
+                    };
+                    contattoNuovo.nome= nome;
+                    contattoNuovo.avatar= 'avataaars';
+                    contattoNuovo.chat= '';
+                    contattoNuovo.notifiche = generaRandomMinMax(1, 9);
+                    utenti.push(contattoNuovo);
+                    var templatePopolatoNuovo = template(contattoNuovo);    // Popolo il templateUtente con i dati presi dall'oggetto UTENTE
+                    $('.chat').append(templatePopolatoNuovo);                 // Aggiungo il template così popolato al div #risultato.
                     $('.inserisci-nome').hide();
                     var nome = $('.in-search-bar-input').val('');
                     scroll2();
@@ -246,5 +298,9 @@ $(document).ready(function(){
 
      console.log(these);
 
+     function generaRandomMinMax(min, max) { // funzione che genera un numero random tra due valori dati in ingresso MIN e MAX, estremi inclusi
+         var numeroRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+         return numeroRandom;
+     }
 
 })
