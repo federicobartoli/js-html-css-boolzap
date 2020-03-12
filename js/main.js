@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
 
+
+
+
      var source = $('#template-utente').html();              // clono il template messaggio
      var template = Handlebars.compile(source);
 
@@ -39,6 +42,26 @@ $(document).ready(function(){
 
 
 
+
+
+
+          var source= $('#template-chat-you').html();
+          var templateChatYou = Handlebars.compile(source);
+
+          function creaMsg(testoMsg, sentReceived , direzioneDiv, comparsaNumber) {
+
+             var datiMessaggio = {
+                 testoMessaggio: testoMsg,
+                 direzione: sentReceived,
+                 oraPerfetta: ora + ':' + minuti + ampm,
+                 dirDiv:  direzioneDiv,
+                 number: comparsaNumber,
+                 nomeChiave : $('.active').attr('nome-utente'),
+             };
+
+             var templateMessaggio = templateChatYou(datiMessaggio);
+             $('.sfondo-chat').append(templateMessaggio);
+         }
 
 
      ciao = []
@@ -85,37 +108,37 @@ $(document).ready(function(){
           console.log('elemento cliccato', $(this))
           $(this).parents(".chat-you").remove();
           $(this).parents(".chat-amico").remove();
-          //$(this).click(eliminaMsg);
+
      });
 
-     /*$(document).on('click' , function() {
-          //$(".chat-object").click(chat);
-          $('.chat-you').click(function() {
-               $(this).children('.menu-a-comparsa').toggle();
-
-
-
-
-          })
-
-          $('.chat-amico').click(function() {
-               $(this).children('.menu-a-comparsa2').toggle();
-
-
-
-
-          })
-          $('.elimina').click(function(){
-               console.log('elemento cliccato', $(this))
-               $(this).click(eliminaMsg);
-          })
-
-
-
-
-
-
-     })*/
+     // $(document).on('click' , function() {
+     //      //$(".chat-object").click(chat);
+     //      $('.chat-you').click(function() {
+     //           $(this).children('.menu-a-comparsa').toggle();
+     //
+     //
+     //
+     //
+     //      })
+     //
+     //      $('.chat-amico').click(function() {
+     //           $(this).children('.menu-a-comparsa2').toggle();
+     //
+     //
+     //
+     //
+     //      })
+     //      $('.elimina').click(function(){
+     //           console.log('elemento cliccato', $(this))
+     //           $(this).click(eliminaMsg);
+     //      })
+     //
+     //
+     //
+     //
+     //
+     //
+     // })
 
 
 
@@ -144,6 +167,7 @@ $(document).ready(function(){
                     contattoNuovo.avatar= 'avataaars';
                     contattoNuovo.chat= '';
                     contattoNuovo.style = 'no-opacity';
+                    contattoNuovo.chat = 'inizia una chat';
                     utenti.push(contattoNuovo);
                     var templatePopolatoNuovo = template(contattoNuovo);    // Popolo il templateUtente con i dati presi dall'oggetto UTENTE
                     $('.chat').append(templatePopolatoNuovo);                 // Aggiungo il template così popolato al div #risultato.
@@ -205,18 +229,15 @@ $(document).ready(function(){
           ciao.length = 0;
           var messaggioUtente = $('.search-bar-input-messaggio').val();
           if(messaggioUtente.trim().length > 0) {
-               // console.log(messaggioUtente);
+
                $('.search-bar-input-messaggio').val('');
-               var messaggio = $('.Arianna.main-chat.sxs .chat-you').clone();
-               // console.log(messaggio);
-               messaggio.children('p').text(messaggioUtente);
-               messaggio.children('.ok-send').text(ora + ':' + minuti + ampm);
+               creaMsg(messaggioUtente, 'sxs' , 'chat-you')
                console.log('chiamata scroll1');
                scroll()
-               setTimeout(messaggioAutomatico, 1000);
+               setTimeout(creaMsg('ok', 'dxs' , 'chat-amico' , '2'), 1000);
                console.log('chiamata scroll2');
                scroll()
-               var thisfunction = $('.main-chat2').append(messaggio);
+
 
 
           }
@@ -235,14 +256,13 @@ $(document).ready(function(){
      }
 
 
-     function messaggioAutomatico() {
-          var messaggioAutomatico = $('.Arianna.main-chat.dxs .chat-amico').clone();
-          messaggioAutomatico.children('p').text('ok');
-          // console.log(messaggioAutomatico);
-          messaggioAutomatico.children('.ok-send').text(ora + ':' + minuti + ampm);
-          $('.main-chat2').append(messaggioAutomatico)
-     }
-
+     // function messaggioAutomatico() {
+     //      var messaggioAutomatico = $('.Arianna.main-chat.dxs .chat-amico').clone();
+     //      messaggioAutomatico.children('p').text('ok');
+     //      // console.log(messaggioAutomatico);
+     //      messaggioAutomatico.children('.ok-send').text(ora + ':' + minuti + ampm);
+     //      $('.main-chat2').append(messaggioAutomatico)
+     // }
 
 
 

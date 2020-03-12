@@ -200,17 +200,18 @@
 
                     <div class="main">
                          <div class="navbar-contatto">
+
                               <div class="object-side">
-                              <div class="avatar-utente-object-side">
-                              <img class="avatar offline-chat Alessandro" id="avatar" src="img/avataaars (5).png" alt="">
-                              <img class="avatar2  Alessandro" id="avatar" src="img/avataaars (5).png" alt="">
-                              <img class="avatar offline-chat Arianna" id="avatar" src="img/avataaars (4).png" alt="">
-                              <img class="avatar offline-chat Federico" id="avatar" src="img/avataaars (1).png" alt="">
-                              <img class="avatar offline-chat Roberta" id="avatar" src="img/avataaars (6).png" alt="">
-                              <img class="avatar offline-chat Mamma" id="avatar" src="img/avataaars (7).png" alt="">
-                              <img class="avatar offline-chat Angelo" id="avatar" src="img/avataaars (8).png" alt="">
-                              <img class="avatar offline-chat utente" id="avatar" src="img/avataaars.png" alt="">
-                              <p id="nome-utente" class="bolder">Alessandro</p>
+                                   <div class="avatar-utente-object-side">
+                                   <img class="avatar offline-chat Alessandro" id="avatar" src="img/avataaars (5).png" alt="">
+                                   <img class="avatar2  Alessandro" id="avatar" src="img/avataaars (5).png" alt="">
+                                   <img class="avatar offline-chat Arianna" id="avatar" src="img/avataaars (4).png" alt="">
+                                   <img class="avatar offline-chat Federico" id="avatar" src="img/avataaars (1).png" alt="">
+                                   <img class="avatar offline-chat Roberta" id="avatar" src="img/avataaars (6).png" alt="">
+                                   <img class="avatar offline-chat Mamma" id="avatar" src="img/avataaars (7).png" alt="">
+                                   <img class="avatar offline-chat Angelo" id="avatar" src="img/avataaars (8).png" alt="">
+                                   <img class="avatar offline-chat utente" id="avatar" src="img/avataaars.png" alt="">
+                                   <p id="nome-utente" class="bolder">Alessandro</p>
                               </div>
                               <div class="barra-strumenti-object-side">
                                    <div class="barra-strumenti">
@@ -223,170 +224,19 @@
 
                          </div>
                          <div class="sfondo-chat">
-                              <div class="Arianna main-chat sxs offline-chat ">
-                                   <div class="chat-you">
-                                        <p>ciao!</p>
-                                        <small class="ok-send">9.18 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
+                              <script id="template-chat-you" type="text/x-handlebars-template">
+
+                                        <div class="{{nomeChiave}} main-chat {{direzione}}">
+                                             <div class="{{dirDiv}}">
+                                                  <p>{{testoMessaggio}}</p>
+                                                  <small class="ok-send">{{oraPerfetta}}</small>
+                                                  <i class="fas fa-caret-down"></i>
+                                                  <div class="menu-a-comparsa{{number}}">
+                                                  <p class="">Info</p>
+                                                  <p class="elimina">Elimina</p>
+                                             </div>
                                         </div>
-                                   </div>
-
-
-
-
-                              </div>
-                              <div class="Arianna main-chat dxs offline-chat ">
-                                   <div class="chat-amico">
-                                        <p>😀🐶🐱🐰</p>
-                                        <small>9.19 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa2">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-                                   </div>
-                              </div>
-
-
-
-                              <div class="Alessandro main-chat sxs offline-chat ">
-                                   <div class="chat-you">
-                                        <p>davvero?!</p>
-                                        <small class="ok-send">9.18 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-                                   </div>
-
-
-
-
-                              </div>
-                              <div class="Alessandro main-chat dxs offline-chat ">
-                                   <div class="chat-amico">
-                                        <p>😀Divertiti..!</p>
-                                        <small>9.19 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa2">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-
-                                   </div>
-                              </div>
-                              <div class="Federico main-chat sxs offline-chat ">
-                                   <div class="chat-you">
-                                        <p>ehyyyyyy?</p>
-                                        <small class="ok-send">9.18 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-                                   </div>
-
-
-
-
-                              </div>
-                              <div class="Federico main-chat dxs offline-chat ">
-                                   <div class="chat-amico">
-                                        <p>Ciao fede,come stai?</p>
-                                        <small>9.19 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa2">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-
-                                   </div>
-                              </div>
-                              <div class="Roberta main-chat sxs offline-chat ">
-                                   <div class="chat-you">
-                                        <p>come sta bridget?</p>
-                                        <small class="ok-send">9.18 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-                                   </div>
-
-
-
-
-                              </div>
-                              <div class="Roberta main-chat dxs offline-chat ">
-                                   <div class="chat-amico">
-                                        <p>🐶Bridget sta bene!</p>
-                                        <small>9.19 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa2">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-
-                                   </div>
-                              </div>
-                              <div class="Mamma main-chat sxs offline-chat ">
-                                   <div class="chat-you">
-                                        <p>come sta fiocca?</p>
-                                        <small class="ok-send">9.18 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-                                   </div>
-
-
-
-
-                              </div>
-                              <div class="Mamma main-chat dxs offline-chat ">
-                                   <div class="chat-amico">
-                                        <p>Rispondi a fiocca ! 🐱</p>
-                                        <small>9.19 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa2">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-
-                                   </div>
-                              </div>
-                              <div class="Angelo main-chat sxs offline-chat ">
-                                   <div class="chat-you">
-                                        <p>wei?</p>
-                                        <small class="ok-send">9.18 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-                                   </div>
-
-
-
-
-                              </div>
-                              <div class="Angelo main-chat dxs offline-chat ">
-                                   <div class="chat-amico">
-                                        <p>Ciaoooooo🐰</p>
-                                        <small>9.19 AM</small>
-                                        <i class="fas fa-caret-down"></i>
-                                        <div class="menu-a-comparsa2">
-                                        <p class="">Info</p>
-                                        <p class="elimina">Elimina</p>
-                                        </div>
-
-                                   </div>
-                              </div>
+                              </script>
 
 
 
@@ -395,11 +245,13 @@
 
 
 
-                              <div class="chat-di-prova">
+
+
+                              <!-- <div class="chat-di-prova">
                                    <div class="main-chat2">
 
                                    </div>
-                              </div>
+                              </div> -->
 
 
 
