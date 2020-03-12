@@ -143,7 +143,7 @@ $(document).ready(function(){
                     contattoNuovo.nome= nome;
                     contattoNuovo.avatar= 'avataaars';
                     contattoNuovo.chat= '';
-                    contattoNuovo.notifiche = generaRandomMinMax(1, 9);
+                    contattoNuovo.style = 'no-opacity';
                     utenti.push(contattoNuovo);
                     var templatePopolatoNuovo = template(contattoNuovo);    // Popolo il templateUtente con i dati presi dall'oggetto UTENTE
                     $('.chat').append(templatePopolatoNuovo);                 // Aggiungo il template così popolato al div #risultato.
