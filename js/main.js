@@ -166,7 +166,7 @@ $(document).ready(function(){
                     for (var i = 0; i < utenti.length; i++) {
                          console.log(utenti[i].nome);
                          if (utenti[i].nome == nome) {
-                         var nome = nome + ('(1)');
+                         var nome = nome + ('1');
                          }
                     }
                     contattoNuovo.nome= nome;
