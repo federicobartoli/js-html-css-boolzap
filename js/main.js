@@ -33,7 +33,7 @@ $(document).ready(function(){
 
      ];
 
-     console.log(utenti);
+
 
      for (var i = 0; i < utenti.length; i++) {
           var templatePopolato = template(utenti[i]);         // Popolo il templateUtente con i dati presi dall'oggetto UTENTE
@@ -163,6 +163,12 @@ $(document).ready(function(){
                     var contattoNuovo = {
 
                     };
+                    for (var i = 0; i < utenti.length; i++) {
+                         console.log(utenti[i].nome);
+                         if (utenti[i].nome == nome) {
+                         var nome = nome + ('(1)');
+                         }
+                    }
                     contattoNuovo.nome= nome;
                     contattoNuovo.avatar= 'avataaars';
                     contattoNuovo.chat= '';
@@ -299,7 +305,6 @@ $(document).ready(function(){
                $('.avatar').addClass("offline-chat");
                $('.avatar2').addClass("offline-chat");
                $('.utente').removeClass("offline-chat");
-
           }
 
            $(".main-chat2").empty();
